@@ -1,6 +1,10 @@
 .header  {
   font-family: monospace;
   background: papayawhip;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* added */
+  padding: 8px;
 }
 
 .logo {
@@ -22,4 +26,21 @@ a {
   padding: 8px;
   /* this removes the line under the links */
   text-decoration: none;
+}
+
+/*
+ * No need for that cause align-items is set to center, not the default stretch
+.left-links,
+.right-links {
+    display: flex;
+    align-items: center;
+}
+*/
+
+.left-links > ul,
+.right-links > ul {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
 }
